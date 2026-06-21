@@ -27,11 +27,41 @@ ENTITY_SPEED = {
     'Bg9': 2,
     'Bg10': 1,
     'Player': 3,
-    'Meteor_01': 5,
-    'Meteor_02': 5,
 }
 
 EVENT_ENEMY = pygame.USEREVENT + 1
+
+ENEMY_LIST = (
+    'Bomb_01',
+    'Bomb_02',
+    'Crystal',
+    'Meteor_01',
+    'Meteor_02',
+    'Meteor_03',
+    'Meteor_04',
+    'Meteor_05',
+    'Meteor_06',
+    'Meteor_07',
+    'Meteor_08',
+    'Meteor_09',
+    'Meteor_10'
+)
+
+ENEMY_SPEED = {
+    'Bomb_01': 5,
+    'Bomb_02': 5,
+    'Crystal': 3,
+    'Meteor_01': 4,
+    'Meteor_02': 3,
+    'Meteor_03': 5,
+    'Meteor_04': 4,
+    'Meteor_05': 6,
+    'Meteor_06': 4,
+    'Meteor_07': 5,
+    'Meteor_08': 4,
+    'Meteor_09': 5,
+    'Meteor_10': 2,
+}
 
 # M
 MENU_OPTION = ('PLAY',
@@ -45,7 +75,7 @@ PLAYER_KEY_LEFT = pygame.K_LEFT
 PLAYER_KEY_RIGHT = pygame.K_RIGHT
 
 # S
-SPAWN_TIME = 2500
+SPAWN_TIME = 1000
 
 # W
 WIN_WIDTH = 576

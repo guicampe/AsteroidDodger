@@ -2,7 +2,7 @@ import random
 
 from code.Enemy import Enemy
 from code.Background import Background
-from code.Const import WIN_WIDTH, BACKGROUND_SCENES, WIN_HEIGHT
+from code.Const import WIN_WIDTH, BACKGROUND_SCENES, WIN_HEIGHT, ENEMY_LIST
 from code.Player import Player
 
 
@@ -19,7 +19,7 @@ class EntityFactory:
                 return list_bg
             case 'Player':
                 return Player('Player', (10, (WIN_HEIGHT / 2)))
-            case 'Meteor_01':
-                return Enemy('Meteor_01', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)))
-            case 'Meteor_02':
-                return Enemy('Meteor_02', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)))
+            case 'Enemy':
+                enemy_name = random.choice(ENEMY_LIST)
+                spawn_y = random.randint(30, WIN_HEIGHT - 30)
+                return Enemy(enemy_name, (WIN_WIDTH, spawn_y))

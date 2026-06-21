@@ -47,6 +47,5 @@ class Level:
                     pygame.quit()
                     sys.exit()
                 if event.type == EVENT_ENEMY:
-                    choice = random.choice(('Meteor_01', 'Meteor_02'))
-                    self.entity_list.append(EntityFactory.get_entity(choice))
+                    self.entity_list.append(EntityFactory.get_entity('Enemy'))
             pygame.display.flip()
