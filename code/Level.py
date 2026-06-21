@@ -1,7 +1,9 @@
+import random
 import sys
 
 import pygame
 
+from code.Const import EVENT_ENEMY, SPAWN_TIME
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 
@@ -14,6 +16,8 @@ class Level:
         self.current_scene = 1
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('Bg', scene=self.current_scene))
+        self.entity_list.append(EntityFactory.get_entity('Player'))
+        pygame.time.set_timer(EVENT_ENEMY, SPAWN_TIME)
 
         self.scene_start_time = pygame.time.get_ticks()
         self.scene_duration_ms = 10_000
@@ -42,4 +46,7 @@ class Level:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+                if event.type == EVENT_ENEMY:
+                    choice = random.choice(('Meteor_01', 'Meteor_02'))
+                    self.entity_list.append(EntityFactory.get_entity(choice))
             pygame.display.flip()
