@@ -2,7 +2,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import C_ORANGE, WIN_WIDTH, MENU_OPTION, C_WHITE, C_RED
+from code.Const import C_ORANGE, WIN_WIDTH, MENU_OPTION, C_WHITE, C_RED, C_ORANGE_STRONG
 
 
 class Menu:
@@ -18,6 +18,7 @@ class Menu:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(60, 'Aster   id', C_WHITE, (256, 45))
             self.menu_text(60, 'D  dger', C_WHITE, (320, 73))
+            self.menu_text(30, 'Use arrow keys to move', C_ORANGE_STRONG, (WIN_WIDTH / 2, 305))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
