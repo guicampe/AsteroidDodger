@@ -29,6 +29,34 @@ ENTITY_SPEED = {
     'Player': 3,
 }
 
+ENTITY_HEALTH = {
+    'Bg0': 999,
+    'Bg1': 999,
+    'Bg2': 999,
+    'Bg3': 999,
+    'Bg4': 999,
+    'Bg5': 999,
+    'Bg6': 999,
+    'Bg7': 999,
+    'Bg8': 999,
+    'Bg9': 999,
+    'Bg10': 999,
+    'Player': 3,
+    'Bomb_01': 999,
+    'Bomb_02': 999,
+    'Crystal': 999,
+    'Meteor_01': 999,
+    'Meteor_02': 999,
+    'Meteor_03': 999,
+    'Meteor_04': 999,
+    'Meteor_05': 999,
+    'Meteor_06': 999,
+    'Meteor_07': 999,
+    'Meteor_08': 999,
+    'Meteor_09': 999,
+    'Meteor_10': 999,
+}
+
 EVENT_ENEMY = pygame.USEREVENT + 1
 
 ENEMY_LIST = (

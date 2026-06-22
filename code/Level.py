@@ -1,11 +1,13 @@
-import random
 import sys
 
 import pygame
+from pygame import Surface, Rect
+from pygame.font import Font
 
-from code.Const import EVENT_ENEMY, SPAWN_TIME
+from code.Const import EVENT_ENEMY, SPAWN_TIME, C_WHITE, WIN_HEIGHT
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
+from code.EntityMediator import EntityMediator
 
 
 class Level:
@@ -49,3 +51,6 @@ class Level:
                 if event.type == EVENT_ENEMY:
                     self.entity_list.append(EntityFactory.get_entity('Enemy'))
             pygame.display.flip()
+
+            EntityMediator.verify_collision(entity_list=self.entity_list)
+            EntityMediator.verify_health(entity_list=self.entity_list)
