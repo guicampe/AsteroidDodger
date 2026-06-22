@@ -12,6 +12,8 @@ BACKGROUND_SCENES = {
 C_WHITE = (255, 255, 255)
 C_ORANGE = (255, 128, 0)
 C_RED = (255, 0, 0)
+C_YELLOW = (255, 255, 128)
+C_GREEN = (0, 255, 0)
 
 # E
 ENTITY_SPEED = {
@@ -42,19 +44,19 @@ ENTITY_HEALTH = {
     'Bg9': 999,
     'Bg10': 999,
     'Player': 3,
-    'Bomb_01': 999,
-    'Bomb_02': 999,
-    'Crystal': 999,
-    'Meteor_01': 999,
-    'Meteor_02': 999,
-    'Meteor_03': 999,
-    'Meteor_04': 999,
-    'Meteor_05': 999,
-    'Meteor_06': 999,
-    'Meteor_07': 999,
-    'Meteor_08': 999,
-    'Meteor_09': 999,
-    'Meteor_10': 999,
+    'Bomb_01': 1,
+    'Bomb_02': 1,
+    'Crystal': 1,
+    'Meteor_01': 1,
+    'Meteor_02': 1,
+    'Meteor_03': 1,
+    'Meteor_04': 1,
+    'Meteor_05': 1,
+    'Meteor_06': 1,
+    'Meteor_07': 1,
+    'Meteor_08': 1,
+    'Meteor_09': 1,
+    'Meteor_10': 1,
 }
 
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -91,6 +93,62 @@ ENEMY_SPEED = {
     'Meteor_10': 2,
 }
 
+ENTITY_DAMAGE = {
+    'Bg0': 0,
+    'Bg1': 0,
+    'Bg2': 0,
+    'Bg3': 0,
+    'Bg4': 0,
+    'Bg5': 0,
+    'Bg6': 0,
+    'Bg7': 0,
+    'Bg8': 0,
+    'Bg9': 0,
+    'Bg10': 0,
+    'Player': 1,
+    'Bomb_01': 1,
+    'Bomb_02': 1,
+    'Crystal': 1,
+    'Meteor_01': 1,
+    'Meteor_02': 1,
+    'Meteor_03': 1,
+    'Meteor_04': 1,
+    'Meteor_05': 1,
+    'Meteor_06': 1,
+    'Meteor_07': 1,
+    'Meteor_08': 1,
+    'Meteor_09': 1,
+    'Meteor_10': 1,
+}
+
+ENTITY_SCORE = {
+    'Bg0': 0,
+    'Bg1': 0,
+    'Bg2': 0,
+    'Bg3': 0,
+    'Bg4': 0,
+    'Bg5': 0,
+    'Bg6': 0,
+    'Bg7': 0,
+    'Bg8': 0,
+    'Bg9': 0,
+    'Bg10': 0,
+    'Player': 0,
+    'Bomb_01': 1,
+    'Bomb_02': 1,
+    'Crystal': 1,
+    'Meteor_01': 1,
+    'Meteor_02': 1,
+    'Meteor_03': 1,
+    'Meteor_04': 1,
+    'Meteor_05': 1,
+    'Meteor_06': 1,
+    'Meteor_07': 1,
+    'Meteor_08': 1,
+    'Meteor_09': 1,
+    'Meteor_10': 1,
+}
+
 # M
 MENU_OPTION = ('PLAY',
                'EXIT'
@@ -103,7 +161,7 @@ PLAYER_KEY_LEFT = pygame.K_LEFT
 PLAYER_KEY_RIGHT = pygame.K_RIGHT
 
 # S
-SPAWN_TIME = 1000
+SPAWN_TIME = 500
 
 # W
 WIN_WIDTH = 576

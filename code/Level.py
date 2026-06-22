@@ -4,7 +4,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import EVENT_ENEMY, SPAWN_TIME, C_WHITE, WIN_HEIGHT
+from code.Const import EVENT_ENEMY, SPAWN_TIME, C_WHITE, WIN_HEIGHT, C_GREEN
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 from code.EntityMediator import EntityMediator
@@ -44,6 +44,9 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
+                if ent.name == 'Player':
+                    self.level_text(20, f'Health {ent.health}', C_GREEN, (10, 0))
+                    self.level_text(20, f'Score {ent.score}', C_GREEN, (10, 20))
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -54,3 +57,10 @@ class Level:
 
             EntityMediator.verify_collision(entity_list=self.entity_list)
             EntityMediator.verify_health(entity_list=self.entity_list)
+
+
+    def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
+        text_font: Font = pygame.font.SysFont(name='Times New Roman', size=text_size)
+        text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
+        text_rect: Rect = text_surf.get_rect(left=text_pos[0], top=text_pos[1])
+        self.window.blit(source=text_surf, dest=text_rect)
