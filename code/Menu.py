@@ -13,7 +13,8 @@ class Menu:
 
     def run(self):
         menu_option = 0
-        # music
+        pygame.mixer_music.load('./asset/Menu.wav')
+        pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(60, 'Aster   id', C_WHITE, (256, 45))

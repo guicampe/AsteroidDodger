@@ -39,7 +39,8 @@ class Level:
             self.scene_start_time = pygame.time.get_ticks()
 
     def run(self, player_score: int):
-        # music
+        pygame.mixer_music.load('./asset/Level.wav')
+        pygame.mixer_music.play(-1)
         clock = pygame.time.Clock()
         game_over = False
         while True:
